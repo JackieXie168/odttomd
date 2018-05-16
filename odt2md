@@ -41,7 +41,7 @@ basename=sys.argv[1]
 def images(key, value, format, meta):
   global count
   global basename
-  if key == 'Image' and value[1][0].startswith('data:'):
+  if key == 'Image' and value[1] and value[1][0].startswith('data:'):
     src = value[1][0]
     start = src.find(',')
     ext = src[src.find('/')+1:src.find(';')]
