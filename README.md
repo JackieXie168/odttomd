@@ -14,7 +14,7 @@ This script tries to fix various issues between the convertions.
 
 **Install requirements**
 ```
-sudo apt-get install pandoc python-pandocfilters
+sudo apt-get install unoconv pandoc python-pandocfilters
 ```
 I strongly recommand to install the latest pandoc from debian unstable
 repo (https://packages.debian.org/sid/pandoc) or from source
