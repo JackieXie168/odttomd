@@ -150,9 +150,11 @@ fi
 for F in "$@"; do
 
   # Convert file to HTML
-  TFILE="/tmp/$(basename $0).$(basename $F).html"
+  BASENAME="$(basename $F)"
+  TBASE="/tmp/${BASENAME%.*}"
+  TFILE="$TBASE.html"
   "$ODT2HTML" --output="$TFILE" --format=html "$F"
-  cp /tmp/$(basename $0).$(basename $F)_html_*.png "$(dirname $F)" || true
+  cp ${TBASE}_html_*.png "$(dirname $F)" || true
 
   # Fix <li> issues
   lead='^<[ou]l>$'
@@ -201,7 +203,7 @@ for F in "$@"; do
   sed -i.bak -r 's#LBTOK#<br/>#g' "$MDFILE"
 
   # Remove temporary file
-  rm /tmp/$(basename $0).$(basename $F)?html*
+  rm ${TBASE}?html*
   rm "$MDFILE.bak"
 
 done
