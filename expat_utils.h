@@ -1,6 +1,6 @@
 #pragma once
 
-#include <cstdint>
+#include <tr1/cstdint.hpp>
 #include <string>
 #include <expat.h>
 

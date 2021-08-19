@@ -1,6 +1,6 @@
 #pragma once
 
-#include <cstdint>
+#include <tr1/cstdint>
 #include <string>
 
 bool strToInt(const std::string &str, uint32_t &outputInt);
