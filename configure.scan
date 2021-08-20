@@ -15,13 +15,10 @@ AC_PROG_INSTALL
 AC_PROG_LN_S
 AC_PROG_MAKE_SET
 AC_PROG_RANLIB
-AC_PROG_MKDIR_P
 
 # Checks for libraries.
 # FIXME: Replace 'main' with a function in '-lexpat':
 AC_CHECK_LIB([expat], [main])
-# FIXME: Replace 'main' with a function in '-lpthread':
-AC_CHECK_LIB([pthread], [main])
 # FIXME: Replace 'main' with a function in '-lzip':
 AC_CHECK_LIB([zip], [main])
 
